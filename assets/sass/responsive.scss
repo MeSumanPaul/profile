@@ -1,0 +1,183 @@
+@media (max-width: 1200px) {
+  .about::before,
+  .expertise-area::before,
+  .expertise-area::before {
+    font-size: 150px;
+    top: 0;
+  }
+  .about {
+    text-align: center;
+    padding-top: 300px;
+
+    .divider {
+      margin-inline: auto;
+    }
+
+    .hobbies-area ul {
+      justify-content: center;
+    }
+    .about-content {
+      padding-bottom: 4rem;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .about::before,
+  .expertise-area::before,
+  .expertise-area::before {
+    font-size: 100px;
+    top: 0;
+  }
+
+  .about {
+    text-align: center;
+    padding-top: 300px;
+
+    .divider {
+      margin-inline: auto;
+    }
+
+    .hobbies-area ul {
+      justify-content: center;
+    }
+    .about-content {
+      padding-bottom: 4rem;
+    }
+  }
+  .about::before {
+    top: 250px;
+  }
+
+  .expertise-area {
+    padding-top: 50px;
+    // padding-bottom: 200px;
+  }
+
+  .expertise-area .skill-list.p-lang {
+    li {
+      width: calc(50%);
+
+      &:nth-child(odd) {
+        border: 0;
+        border-right: 1px solid rgba(#fff, 0.1);
+        border-bottom: 1px solid rgba(#fff, 0.1);
+      }
+      &:nth-child(even) {
+        border: 0;
+        border-bottom: 1px solid rgba(#fff, 0.1);
+        justify-content: flex-start;
+
+        .icon {
+          order: -1;
+          margin-left: 0;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .short-intro-item .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .short-intro-item .icon img {
+    height: 30px;
+  }
+  .short-intro {
+    padding-block: 1rem;
+    height: auto;
+    margin-top: -80px;
+  }
+}
+@media (max-width: 768px) {
+  .banner-area {
+    height: 550px;
+  }
+  .banner-area h1 {
+    font-size: 65px;
+  }
+  .expertise-area {
+    padding-bottom: 300px;
+  }
+  .short-intro {
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: center;
+    padding-inline: 2rem;
+    width: 80%;
+  }
+  .short-intro-item {
+    width: calc(100%);
+    justify-content: center;
+    border: 0;
+    border-bottom: 1px solid rgba(#fff, 0.1);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .about .about-image {
+    height: 600px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 600px) {
+
+    .banner-area h1{
+        font-size: 45px;
+        letter-spacing: 0;
+    }
+
+    .about::before{
+        top: 350px;
+    }
+    .primary-btn, .primary-btn-outline{
+        padding-inline: 1rem;
+    }
+    .about::before, .expertise-area::before, .expertise-area::before{
+        font-size: 70px;
+    }
+    .expertise-area .section-heading .title, .about h2{
+        font-size: 35px;
+    }
+    .about .hobbies-area ul li{
+        margin: 0 0.5rem;
+    }
+    .expertise-area .skill-list li:nth-child(odd), .expertise-area .skill-list li:nth-child(even){
+        width: 100%;
+        border: 0 !important;
+        border-bottom:1px solid rgba(#fff, 0.1) !important ;
+        justify-content: flex-start;
+        text-align: left;
+       
+        padding-inline: 0;
+     
+
+        .icon{
+            order: 0;
+            margin-left: 0;
+            margin-right: 1rem;
+           
+        }
+    }
+    .expertise-area .nav{
+        flex-wrap: nowrap;
+    }
+    .expertise-area .nav-pills .nav-link{
+        width: auto;
+        font-size: 14px;
+    }
+
+    .about .about-image img{
+        width: 100%;
+        height: 350px;
+    }
+    .about{
+        padding-top: 375px;
+        padding-bottom: 180px;
+    }
+}

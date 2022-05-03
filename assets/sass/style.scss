@@ -166,7 +166,7 @@ body {
 }
 
 .short-intro {
-  width: 60%;
+  width:calc(min( 800px, 95%));
   height: 150px;
   padding-block: 2rem;
   display: flex;
@@ -174,7 +174,7 @@ body {
   background-color: #0d0b21;
   margin: 0 auto;
   border-radius: 500px;
-  margin-top: -100px;
+  margin-top: -102px;
   position: relative;
   z-index: 99;
 
@@ -345,6 +345,7 @@ body {
 
 .expertise-area {
   padding: 150px 0 250px 0;
+  margin-top: -3px;
 
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1057%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(10%2c 9%2c 25%2c 1)'%3e%3c/rect%3e%3cpath d='M1115.929282765955 70.66759135484845L1217.1369252962636 63.5904635683855 1210.0597975098005-37.61717896192316 1108.8521549794918-30.540051175460206z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M164.22530515113294 107.25058401733925L304.73578787742713 185.13681641652192 382.62202027660976 44.62633369022777 242.11153755031563-33.25989870895491z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M51.488335886668374 362.25198537440104L206.1737969411976 412.5123383918857 101.74868890415303 207.56652431987183z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M676.9142136790647 522.9981915832486L795.2858164862458 396.30248109036324 648.2190742575018 359.63462396581764z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M727.0410117283634 332.76569797934644L683.5540726522288 421.92713622567 772.7155108985523 465.4140753018046 816.2024499746869 376.25263705548105z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1199.9691657913258 351.4884285276534L1210.2429918351645 253.7395032072891 1112.4940665148001 243.46567716345055 1102.2202404709615 341.2146024838148z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M100.56450089180004 491.65298506734376L91.13413416770703 356.79245786768826-43.726393031948476 366.22282459178126-34.29602630785547 501.08335179143677z' fill='rgba(38%2c 34%2c 90%2c 0.1)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1057'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 3s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -20px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -50px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 7s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
   background-attachment: fixed;
@@ -363,6 +364,18 @@ body {
     opacity: 0.05;
     font-weight: 900;
   }
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: -150px;
+    width: 100%;
+    height: 250px;
+    background-color: #100f2e;
+    z-index: -1;
+  }
+
+  
 
   .section-heading {
     text-align: center;
@@ -408,6 +421,8 @@ body {
       transition: all 0.5s;
       transform-origin: center;
     }
+
+
 
     &:hover {
       color: $yellow;
@@ -455,10 +470,13 @@ body {
         box-shadow: 0 0 0 1px $yellow;
         border-radius: 50%;
         margin-right: 1rem;
+        display: grid;
+        place-content: center;
 
         img {
-          width: 100%;
-          height: 100%;
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
           // filter: invert(1);
         }
       }
@@ -503,6 +521,8 @@ body {
       }
     }
   }
+
+ 
 }
 
 .expertise-svg-curve {
