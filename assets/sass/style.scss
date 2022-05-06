@@ -65,8 +65,8 @@ body {
   bottom: 0;
   z-index: 999;
   width: 100%;
-  padding: 1rem 0.2rem;
-  border-radius: 25px 25px 0 0;
+  padding: 1.5rem 0.2rem;
+  border-radius: 35px 35px 0 0;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0 35px 15px rgba(#000, 0.5);
@@ -90,7 +90,7 @@ body {
       span{
         font-size: 11px;
         display: block;
-        color:rgba(#fff, 0.2);
+        color:rgba(#fff, 0.5);
        
       }
     }
