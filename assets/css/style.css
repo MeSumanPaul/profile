@@ -68,7 +68,7 @@ body {
   bottom: 0;
   z-index: 999;
   width: 100%;
-  padding: 1.5rem 0.2rem;
+  padding: 3rem 0.2rem 2rem 0.2rem;
   border-radius: 35px 35px 0 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -111,15 +111,14 @@ body {
   position: absolute;
   left: 50%;
   top: -20px;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
   border-radius: 50%;
   background-color: #100f2e;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border: 2px solid #fff;
 }
 
 .mobile-navbar .go-top a {
