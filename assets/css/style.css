@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -15,6 +19,13 @@ body {
 
 .navbar-brand span {
   color: #ffb633;
+}
+
+.navbar {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999;
 }
 
 .navbar-nav .nav-link {
@@ -48,6 +59,58 @@ body {
 
 .navbar-nav .nav-item:last-child:hover .nav-link {
   color: #fff;
+}
+
+.mobile-navbar {
+  display: none;
+  background-color: #0a0919;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 1rem 0.2rem;
+  border-radius: 25px 25px 0 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-navbar ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mobile-navbar li {
+  text-align: center;
+}
+
+.mobile-navbar li a {
+  color: #ffb633;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 0.5;
+}
+
+.mobile-navbar li a span {
+  font-size: 11px;
+  display: block;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .mobile-navbar {
+    display: block;
+  }
 }
 
 .banner-area {
@@ -183,7 +246,7 @@ body {
 }
 
 .short-intro {
-  width: calc(min( 800px, 95%));
+  width: calc(min(800px, 95%));
   height: 150px;
   padding-block: 2rem;
   display: -webkit-box;
@@ -588,7 +651,7 @@ body {
 .expertise-area.learing {
   background: #100f2e;
   min-height: auto;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .expertise-area.learing .learning-item {
@@ -632,5 +695,209 @@ body {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.contact-info {
+  padding: 0 0 0 0;
+  background-color: #0a0919;
+  position: relative;
+}
+
+.contact-info::before {
+  content: "";
+  width: 100%;
+  height: 100px;
+  background-color: #0a0919;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  -webkit-clip-path: polygon(100% 100%, 50% 0, 0 100%);
+          clip-path: polygon(100% 100%, 50% 0, 0 100%);
+}
+
+.contact-info .form-widget-inner {
+  padding: 5rem 3rem;
+}
+
+.contact-info .form-widget {
+  background-color: #0d0b21;
+  position: relative;
+  margin-top: -85px;
+  position: relative;
+  border-radius: 0.2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.contact-info .form-widget:focus-within::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/mail-open-outline.svg);
+  background-size: 100% 100%;
+  left: 3rem;
+  top: 50px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: updown 3s infinite ease-in-out;
+          animation: updown 3s infinite ease-in-out;
+}
+
+.contact-info .form-widget:focus-within p {
+  letter-spacing: 1px;
+}
+
+.contact-info .form-widget::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #ffb633;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.contact-info .form-widget h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 45px;
+  margin: 0;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-info .form-widget h2::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb633;
+  border-radius: 50%;
+  right: 69px;
+  top: 6px;
+}
+
+.contact-info .form-widget h2::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb633;
+  border-radius: 50%;
+  left: 64px;
+  top: 25px;
+  -webkit-animation: scaling 3s infinite ease-in-out;
+          animation: scaling 3s infinite ease-in-out;
+}
+
+.contact-info .form-widget h2 span {
+  color: #ffb633;
+}
+
+.contact-info .form-widget p {
+  color: #ffb633;
+  margin-bottom: 2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contact-info .form-widget .form-widget-curve-divider {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #0a0919;
+}
+
+.contact-info .form-control {
+  border-color: rgba(255, 182, 51, 0.3);
+  border-radius: 0;
+  background-color: transparent;
+  margin-bottom: 0.8rem;
+  height: 50px;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contact-info .form-control::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.contact-info .form-control:-ms-input-placeholder {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.contact-info .form-control::-ms-input-placeholder {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.contact-info .form-control::placeholder {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.contact-info textarea.form-control {
+  height: 100px;
+}
+
+@-webkit-keyframes scaling {
+  50% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@keyframes scaling {
+  50% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@-webkit-keyframes updown {
+  50% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+}
+
+@keyframes updown {
+  50% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+}
+
+footer {
+  background-color: #0a0919;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+footer a {
+  color: #ffb633;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer a:hover {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
