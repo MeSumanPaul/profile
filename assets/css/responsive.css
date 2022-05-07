@@ -138,19 +138,24 @@
   .about::before {
     top: 350px;
   }
-  .primary-btn, .primary-btn-outline {
+  .primary-btn,
+  .primary-btn-outline {
     padding-inline: 1rem;
   }
-  .about::before, .expertise-area::before, .expertise-area::before {
+  .about::before,
+  .expertise-area::before,
+  .expertise-area::before {
     font-size: 70px;
   }
-  .expertise-area .section-heading .title, .about h2 {
+  .expertise-area .section-heading .title,
+  .about h2 {
     font-size: 35px;
   }
   .about .hobbies-area ul li {
     margin: 0 0.5rem;
   }
-  .expertise-area .skill-list li:nth-child(odd), .expertise-area .skill-list li:nth-child(even) {
+  .expertise-area .skill-list li:nth-child(odd),
+  .expertise-area .skill-list li:nth-child(even) {
     width: 100%;
     border: 0 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -160,7 +165,8 @@
     text-align: left;
     padding-inline: 0;
   }
-  .expertise-area .skill-list li:nth-child(odd) .icon, .expertise-area .skill-list li:nth-child(even) .icon {
+  .expertise-area .skill-list li:nth-child(odd) .icon,
+  .expertise-area .skill-list li:nth-child(even) .icon {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;

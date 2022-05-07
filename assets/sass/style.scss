@@ -13,12 +13,12 @@ body {
 body::-webkit-scrollbar {
   width: 0.2em;
 }
- 
+
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: $lightblue;
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: $yellow;
   border-radius: 5px;
@@ -40,13 +40,21 @@ body::-webkit-scrollbar-thumb {
   position: sticky !important;
   top: 0 !important;
   z-index: 999;
+  transition: all 0.5s;
 }
-
 
 .navbar-nav .nav-link {
   padding-inline: 1.5rem !important;
 
-  &:hover{
+  ion-icon {
+    display: none;
+  }
+
+  &:hover {
+    color: $yellow !important;
+  }
+
+  &.active {
     color: $yellow !important;
   }
 }
@@ -71,8 +79,53 @@ body::-webkit-scrollbar-thumb {
 
     .nav-link {
       color: #fff;
-      
     }
+  }
+}
+
+.navbar.scrolled {
+  width: 50px;
+  position: fixed !important;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-right: 1px solid $yellow;
+  transition: all 0.5s;
+  padding: 0;
+  animation: fadeMenu 2s 1 ease;
+
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-nav .nav-link span,
+  .cv-download {
+    display: none;
+  }
+  .navbar-nav .nav-link {
+    padding-inline: 15px !important;
+    padding-block: 1rem;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  ion-icon {
+    display: block;
+  }
+}
+
+@keyframes fadeMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -91,7 +144,7 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0 35px 15px rgba(#000, 0.5);
-  transition: all .4s;
+  transition: all 0.4s;
 
   ul {
     margin: 0;
@@ -114,6 +167,9 @@ body::-webkit-scrollbar-thumb {
         font-size: 11px;
         display: block;
         color: rgba(#fff, 0.5);
+      }
+      &.active {
+        color: #fff;
       }
     }
   }
@@ -814,8 +870,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-
-
 footer {
   background-color: $darkblue;
   text-align: center;
@@ -838,4 +892,3 @@ footer {
     }
   }
 }
-

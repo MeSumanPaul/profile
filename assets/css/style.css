@@ -41,13 +41,23 @@ body::-webkit-scrollbar-thumb {
   position: sticky !important;
   top: 0 !important;
   z-index: 999;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navbar-nav .nav-link {
   padding-inline: 1.5rem !important;
 }
 
+.navbar-nav .nav-link ion-icon {
+  display: none;
+}
+
 .navbar-nav .nav-link:hover {
+  color: #ffb633 !important;
+}
+
+.navbar-nav .nav-link.active {
   color: #ffb633 !important;
 }
 
@@ -78,6 +88,70 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+.navbar.scrolled {
+  width: 50px;
+  position: fixed !important;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #ffb633;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 0;
+  -webkit-animation: fadeMenu 2s 1 ease;
+          animation: fadeMenu 2s 1 ease;
+}
+
+.navbar.scrolled .navbar-brand {
+  display: none;
+}
+
+.navbar.scrolled .navbar-nav {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar.scrolled .navbar-nav .nav-link span,
+.navbar.scrolled .cv-download {
+  display: none;
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+  padding-inline: 15px !important;
+  padding-block: 1rem;
+}
+
+.navbar.scrolled .container {
+  padding: 0;
+}
+
+.navbar.scrolled ion-icon {
+  display: block;
+}
+
+@-webkit-keyframes fadeMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .mobile-navbar {
   display: none;
   opacity: 0;
@@ -93,8 +167,8 @@ body::-webkit-scrollbar-thumb {
           transform: translateX(-50%);
   -webkit-box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 35px 15px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .mobile-navbar ul {
@@ -126,6 +200,10 @@ body::-webkit-scrollbar-thumb {
   font-size: 11px;
   display: block;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.mobile-navbar li a.active {
+  color: #fff;
 }
 
 .mobile-navbar .go-top {
