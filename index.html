@@ -519,11 +519,14 @@
                     <div class="form-widget-inner">
                        <h2>Drop a line<span>.</span></h2>
                        <p> I am exited to hear from you.</p>
-                    <form action="">
-                        <input type="text" placeholder="*Enter name" class="form-control" required>
-                        <input type="email" placeholder="*Enter email" class="form-control" required>
-                        <input type="text" placeholder="*Enter mobile" class="form-control" required>
-                        <textarea placeholder="Message" class="form-control"></textarea>
+                    <form action="mailto:sumanpaul.works@gmail.com"
+                    method="POST"
+                    nctype="multipart/form-data"
+                    name="EmailForm">
+                        <input name="ContactName" type="text" placeholder="*Enter name" class="form-control" required>
+                        <input name="ContactEmail" type="email" placeholder="*Enter email" class="form-control" required>
+                        <input name="ContactPhone" type="text" placeholder="*Enter mobile" class="form-control" required>
+                        <textarea name="ContactPhone" placeholder="Message" class="form-control"></textarea>
                         <button type="submit" class="primary-btn"> Send me <i class="fa fa-send-o"></i> </button>
                     </form>
                 </div>
