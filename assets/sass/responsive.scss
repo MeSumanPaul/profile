@@ -181,3 +181,33 @@
         padding-bottom: 180px;
     }
 }
+
+
+@media (max-width: 450px) {
+ 
+  .short-intro{
+    padding-inline: 0.5rem;
+  }
+  .short-intro-item{
+    padding-inline: 0;
+  }
+
+  .mobile-navbar{
+    padding:1.5rem 0.2rem 1rem;
+  }
+
+  .about .about-curve-divider{
+    margin-top:-60px
+  }
+
+  .expertise-area .nav-pills .nav-link{
+    font-size: 13px;
+  }
+
+  .contact-info .form-widget-inner{
+    padding-inline: 1.5rem;
+  }
+
+
+ 
+}

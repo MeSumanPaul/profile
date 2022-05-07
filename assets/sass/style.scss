@@ -21,17 +21,16 @@ body {
   }
 }
 
-.navbar{
+.navbar {
   position: sticky !important;
   top: 0 !important;
   z-index: 999;
 }
 
-@media(max-width:600px){
-  .navbar{
-  display: none;
-}
-
+@media (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
 }
 
 .navbar-nav .nav-link {
@@ -46,9 +45,7 @@ body {
 
   .nav-link {
     color: $lightblue;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0;
     line-height: 2;
     font-weight: 500;
@@ -66,7 +63,7 @@ body {
 
 // Mobile Navigation Menu
 
-.mobile-navbar{
+.mobile-navbar {
   display: none;
   background-color: $lightblue;
   position: fixed;
@@ -79,32 +76,31 @@ body {
   transform: translateX(-50%);
   box-shadow: 0 0 35px 15px rgba(#000, 0.5);
 
-  ul{
+  ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     justify-content: space-evenly;
   }
-  li{
+  li {
     text-align: center;
-    color:rgba( $yellow, 0.2);
-    a{
+    color: rgba($yellow, 0.2);
+    a {
       color: $yellow;
       font-size: 20px;
       text-align: center;
       text-decoration: none;
       line-height: 0.5;
-  
-      span{
+
+      span {
         font-size: 11px;
         display: block;
-        color:rgba(#fff, 0.5);
-       
+        color: rgba(#fff, 0.5);
       }
     }
   }
-  .go-top{
+  .go-top {
     position: absolute;
     left: 50%;
     top: -15px;
@@ -118,15 +114,15 @@ body {
     box-shadow: 0 -2px 0 $yellow;
     // border: 2px solid rgba(#fff, 0.5);
 
-    a{
+    a {
       line-height: 35px;
       vertical-align: center;
     }
   }
 }
 
-@media(max-width:600px){
-  .mobile-navbar{
+@media (max-width: 600px) {
+  .mobile-navbar {
     display: block;
   }
 }
@@ -656,6 +652,7 @@ body {
 
 .contact-info {
   padding: 0 0 0 0;
+  margin-top: -2px;
   background-color: $darkblue;
   position: relative;
 
@@ -797,6 +794,7 @@ footer {
   background-color: $darkblue;
   text-align: center;
   padding-bottom: 3rem;
+  margin-top: -2px;
 
   p {
     margin: 0;
@@ -814,3 +812,5 @@ footer {
     }
   }
 }
+
+

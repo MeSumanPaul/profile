@@ -48,9 +48,7 @@ body {
 
 .navbar-nav .nav-item:last-child .nav-link {
   color: #100f2e;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 0;
   line-height: 2;
   font-weight: 500;
@@ -727,6 +725,7 @@ body {
 
 .contact-info {
   padding: 0 0 0 0;
+  margin-top: -2px;
   background-color: #0a0919;
   position: relative;
 }
@@ -910,6 +909,7 @@ footer {
   background-color: #0a0919;
   text-align: center;
   padding-bottom: 3rem;
+  margin-top: -2px;
 }
 
 footer p {
