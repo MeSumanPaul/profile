@@ -8,3 +8,12 @@ $(window).scroll(function(){
        $('.mobile-navbar').css({'opacity':'0'});
     }
 });
+
+$(ready(function(){
+
+   $('a').click(function(e){
+    e.preventDefault();
+   })
+
+}));
+
